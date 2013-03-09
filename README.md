@@ -2,15 +2,16 @@ A utility for generating names and email addresses.
 
 The names are taken from the [1990 U.S.
 Census](http://www.census.gov/genealogy/www/data/1990surnames/names_files.html).
-Names are chosen at random, weighted by frequency.  The results are plausible
-and sometimes even entertaining.
+Names are chosen at random, weighted by frequency.
+
+The results are plausible and sometimes even entertaining.
 
 # Examples
 
-From the shell:
+From the shell, optional arg specifies how many names to generate:
 
 ```shell
-% python namegen.py 3                                                                                                   ~/code/namegen
+% python namegen.py 3
 Kathyrn Hanneman khanneman@tlen.pl
 Blanch Gravatt bgravatt@aim.com
 Sterling Otremba sotremba8711@ya.rux
