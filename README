@@ -33,3 +33,7 @@ From the python repl:
  'Luke Poser luke-poser@yahoo.com.au']
 ```
 
+# Requirements
+
+Requires `numpy`.
+
