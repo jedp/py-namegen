@@ -35,7 +35,17 @@ From the python repl:
  'Luke Poser luke-poser@yahoo.com.au']
 ```
 
+There is also a little `web.py` server for serving lists of names to networked
+applications.
+
+```shell
+% python server.py &
+% curl http://localhost:8080/42
+[ ... list of 42 names ... ]
+```
+
 # Requirements
 
-Requires `numpy`.
+- `numpy` (`pip install numpy`)
+- `web` (`pip intall web.py`)
 
