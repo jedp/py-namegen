@@ -1,4 +1,5 @@
 # Some email domains in reverse order of frequency
+mozilla.com
 bluewin.ch
 email.com
 hmamail.com
@@ -24,6 +25,8 @@ inbox.lv
 live.ca
 live.dk
 mit.edu
+berkeley.edu
+husc.harvard.edu
 yahoo.com.cn
 yahoo.com.vn
 yahoo.es
