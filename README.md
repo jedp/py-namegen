@@ -21,6 +21,7 @@ From the python repl:
 
 ```python
 >>> import namegen
+>>> n = namegen.NameGen()
 >>> [n.next() for i in range(10)]
 ['Chin Leong chinleong6194@live.com',
  'Erika Ripperger erikaripperger@centrum.cz',
