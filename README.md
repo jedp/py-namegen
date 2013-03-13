@@ -2,9 +2,10 @@ A utility for generating names and email addresses.
 
 The names are taken from the [1990 U.S.
 Census](http://www.census.gov/genealogy/www/data/1990surnames/names_files.html).
-Names are chosen at random, weighted by frequency.
+Names are chosen at random, weighted by infrequency.
 
-The results are plausible and sometimes even entertaining.
+If you want to be more boring (though you'll still get many entertaining
+results), use `weirdOrder=False` in the constructor.
 
 # Examples
 
@@ -12,9 +13,9 @@ From the shell, optional arg specifies how many names to generate:
 
 ```shell
 % python namegen.py 3
-Kathyrn Hanneman khanneman@tlen.pl
-Blanch Gravatt bgravatt@aim.com
-Sterling Otremba sotremba8711@ya.rux
+Pasty Stash pstash@verizon.net
+Altagracia Kotula altagraciakotula7344@live.nl
+Len Putzer lputzer@live.ca
 ```
 
 From the python repl:
@@ -23,16 +24,16 @@ From the python repl:
 >>> import namegen
 >>> n = namegen.NameGen()
 >>> [n.next() for i in range(10)]
-['Chin Leong chinleong6194@live.com',
- 'Erika Ripperger erikaripperger@centrum.cz',
- 'Helaine Rollinson helaine.rollinson9355@lavabit.com',
- 'Leeanna Sarnicola leeanna.sarnicola@hotmail.fr',
- 'Lindsey Min lmin4691@yahoo.ca',
- 'Iris Lisle ilisle@yahoo.de',
- 'Ignacia Nealy ignacianealy@arcor.de',
- 'Meryl Cluff merylcluff@mailinator.com',
- 'Wilson Holtzer wilson.holtzer@hushmail.com',
- 'Luke Poser luke-poser@yahoo.com.au']
+['Stormy Miska smiska@yahoo.com.au',
+ 'Mozella Kopet mkopet5619@tlen.pl',
+ 'Mardell Varrato mvarrato3345@rochester.rr.com',
+ 'Lynsey Weader lynseyweader3648@email.com',
+ 'Alpha Klena alpha.klena@centrum.cz',
+ 'Boyce Interiano boyce.interiano@yahoo.com.au',
+ 'Malcom Filipek malcom.filipek@mozilla.com',
+ 'Jeanetta Pizzini jeanetta.pizzini@sporktronics.com',
+ 'Chanelle Schilk chanelle-schilk@tut.by',
+ 'Ike Muyskens ikemuyskens@nym.hush.com']
 ```
 
 There is also a little `web.py` server for serving lists of names to networked
@@ -41,7 +42,7 @@ applications.
 ```shell
 % python server.py &
 % curl http://localhost:8080/42
-[ ... list of 42 names ... ]
+[ ... list of 42 awesome names ... ]
 ```
 
 # Requirements

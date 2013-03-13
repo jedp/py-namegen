@@ -17,19 +17,22 @@ import os
 import numpy as np
 
 class NameGen():
-    def __init__(self):
+    def __init__(self, weirdOrder=True):
         "Read data files and compute weights"
         self.data = {}
         for thing in ["girls", "boys", "lasts", "domains"]:
             self.data[thing] = {}
-            self.data[thing]['items'] = self._getData(thing)
+            self.data[thing]['items'] = self._getData(thing, weirdOrder)
             self.data[thing]['weights'] = self._getWeights(self.data[thing]['items'])
 
-    def _getData(self, thing):
+    def _getData(self, thing, weirdOrder=True):
         "Load data for thing"
         filepath = os.path.join("data", thing+".txt")
-        return [line.strip() for line in open(filepath).readlines()
-                if not line.startswith('#')]
+        data = [line.strip() for line in open(filepath).readlines()
+                    if not line.startswith('#')]
+        if weirdOrder:
+            return list(reversed(data))
+        return(data)
 
     def _getWeights(self, items):
         "Simply use cumulative sum as a means of assigning weight"
