@@ -13,9 +13,9 @@ From the shell, optional arg specifies how many names to generate:
 
 ```shell
 % python namegen.py 3
-Pasty Stash pstash@verizon.net
-Altagracia Kotula altagraciakotula7344@live.nl
-Len Putzer lputzer@live.ca
+Pasty Stash <pstash@verizon.net>
+Altagracia Kotula <altagraciakotula7344@live.nl>
+Len Putzer <lputzer@live.ca>
 ```
 
 From the python repl:
@@ -23,7 +23,7 @@ From the python repl:
 ```python
 >>> import namegen
 >>> n = namegen.NameGen()
->>> [n.next() for i in range(10)]
+>>> ['%(first)s %(last)s %(email)s' % (n.next()) for i in range(10)]
 ['Stormy Miska smiska@yahoo.com.au',
  'Mozella Kopet mkopet5619@tlen.pl',
  'Mardell Varrato mvarrato3345@rochester.rr.com',
@@ -37,7 +37,7 @@ From the python repl:
 ```
 
 There is also a little `web.py` server for serving lists of names to networked
-applications.
+applications.  It returns json.
 
 ```shell
 % python server.py &

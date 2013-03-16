@@ -14,6 +14,7 @@ Usage:
 """
 
 import os
+import json
 import numpy as np
 
 class NameGen():
@@ -72,7 +73,11 @@ class NameGen():
         last = self._getWeightedRandom('lasts')
         email = self._emailify(first, last)
         domain = self._getWeightedRandom('domains')
-        return ' '.join([first, last, email+'@'+domain])
+        return {
+            'first': first,
+            'last': last,
+            'email': email + '@' + domain
+        }
 
 if __name__ == '__main__':
     import sys
@@ -82,4 +87,6 @@ if __name__ == '__main__':
         n = 1
 
     names = NameGen()
-    print '\n'.join([names.next() for i in range(n)])
+    for i in range(n):
+        name = names.next()
+        print '%(first)s %(last)s <%(email)s>' % (name)
